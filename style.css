@@ -1,0 +1,149 @@
+/* RESET DE BASE */
+* {
+    box-sizing: border-box;
+}
+
+/* STYLE GÉNÉRAL */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff6fa;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(173, 216, 230, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 40% 80%, rgba(255, 218, 185, 0.25) 0%, transparent 40%),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.15) 0px,
+            rgba(255, 255, 255, 0.15) 2px,
+            transparent 2px,
+            transparent 8px
+        );
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* TITRES */
+h2, h3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* CONTENEURS D’ACTIVITÉS */
+div[id^="activity"] {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* IMAGES */
+img {
+    width: 220px;
+    max-width: 90%;
+    margin: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFFET AU SURVOL */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* LIENS IMAGES */
+a {
+    text-decoration: none;
+}
+
+/* BOUTONS */
+button {
+    margin: 30px 10px;
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+	opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* HOVER BOUTON */
+button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+/* MESSAGE NOURRITURE */
+#food {
+    margin: 30px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-weight: 500;
+}
+
+/* MESSAGE FINAL */
+#confirmation {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* ANIMATION D’APPARITION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACTIVITÉS */
+div[id^="activity"] {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+div[id^="activity"] {
+    background: rgba(255, 230, 240, 0.65);
+    border-radius: 22px;
+    padding: 35px 25px;
+    margin: 60px auto;
+    max-width: 900px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    animation: fadeUp 0.8s ease forwards;
+}
+/* IMAGES */
+img {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* DÉCALAGE POUR CHAQUE IMAGE */
+img:nth-child(1) { animation-delay: 0.2s; }
+img:nth-child(2) { animation-delay: 0.4s; }
+img:nth-child(3) { animation-delay: 0.6s; }
+img:nth-child(4) { animation-delay: 0.8s; }
+img:nth-child(5) { animation-delay: 1s; }
