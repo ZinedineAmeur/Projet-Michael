@@ -1,5 +1,5 @@
 const messages = [
-    "Êtes-vous sûre ?",
+    "Êtes-tu sûre ?",
     "Réfléchis encore !",
     "Dernière chance !",
     "Tu pourrais le regretter",
@@ -13,6 +13,8 @@ const messages = [
 ];
 
 let index = 0;
+let noScale = 1;
+let scale = 1; // taille initiale du bouton Oui
 
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
@@ -23,9 +25,13 @@ noBtn.addEventListener("click", () => {
     message.textContent = messages[index];
     index++;
 
+    scale += 0.15;
+    yesBtn.style.setProperty("--scale", scale);
+
     if (index === messages.length) {
         yesBtn.disabled = false;
         noBtn.disabled = true;
+        yesBtn.style.setProperty("--scale", 2);
     }
 });
 
